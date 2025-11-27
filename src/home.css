@@ -1,0 +1,185 @@
+/* ========== Home Page Compact Styles ========== */
+.home-container {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Section - Reduced Size */
+.hero {
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, rgba(46, 139, 87, 0.1) 0%, rgba(60, 179, 113, 0.1) 100%);
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.hero h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #2E8B57;
+}
+
+.cta {
+  background-color: #ffd400;
+  color: #111;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(255, 212, 0, 0.3);
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(255, 212, 0, 0.4);
+}
+
+/* Stats cards - Reduced Size */
+.user-dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 25px 20px;
+  background: #ffffff;
+  flex: 0 0 auto;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 15px 12px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(46, 139, 87, 0.1);
+}
+
+.stat-icon {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.stat-card h2 {
+  color: #2E8B57;
+  font-size: 1.3rem;
+  margin: 0 0 5px 0;
+}
+
+.stat-card p {
+  margin: 0;
+  color: #666;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+/* Highlights - Reduced Size */
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 25px 20px;
+  background: #f8f9fa;
+  flex: 0 0 auto;
+}
+
+.highlight {
+  background: #fff;
+  padding: 20px 15px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(46, 139, 87, 0.1);
+}
+
+.highlight-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.highlight h3 {
+  color: #2E8B57;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.highlight p {
+  color: #666;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 980px) {
+  .user-dashboard { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .highlights { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .user-dashboard { 
+    grid-template-columns: 1fr; 
+    gap: 12px;
+    padding: 20px 15px;
+  }
+  
+  .highlights { 
+    grid-template-columns: 1fr; 
+    gap: 12px;
+    padding: 20px 15px;
+  }
+  
+  .hero {
+    padding: 25px 15px;
+  }
+  
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+  
+  .stat-card, .highlight {
+    padding: 15px 10px;
+  }
+  
+  .stat-icon {
+    font-size: 1.3rem;
+  }
+  
+  .stat-card h2 {
+    font-size: 1.2rem;
+  }
+  
+  .highlight-icon {
+    font-size: 1.8rem;
+  }
+  
+  .cta {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Remove hover effects on mobile to prevent sticky states */
+@media (hover: none) {
+  .stat-card:hover,
+  .highlight:hover,
+  .cta:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.signup-page {
+  height: 100vh;
+  display: flex;
+  background-color: #f8f9fa;
+  overflow: hidden;
+}
+
+.signup-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.signup-left {
+  flex: 1;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.signup-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.signup-form-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 0 30px;
+}
+
+.auth-card {
+  background: white;
+  padding: 2rem;
+  width: 100%;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.auth-title {
+  color: #2E8B57;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.auth-subtitle {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.form-section {
+  margin-bottom: 1.5rem;
+}
+
+.form-section-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.form-section-title::before {
+  content: "#";
+  margin-right: 5px;
+  color: #2E8B57;
+  font-weight: bold;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e1e5e9;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #2E8B57;
+  background-color: white;
+  box-shadow: 0 0 0 2px rgba(46, 139, 87, 0.1);
+}
+
+.auth-input:hover {
+  border-color: #3CB371;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #555;
+  position: relative;
+  padding-left: 25px;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  border-color: #3CB371;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #2E8B57;
+  border-color: #2E8B57;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 4px;
+  top: 0px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.forgot-password {
+  color: #2E8B57;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-size: 0.85rem;
+}
+
+.forgot-password:hover {
+  color: #ffd400;
+  text-decoration: underline;
+}
+
+.auth-btn {
+  width: 100%;
+  background: #2E8B57;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.auth-btn:hover {
+  background: #ffd400;
+  color: #111;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(255, 212, 0, 0.3);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #777;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+
+.divider::before {
+  margin-right: 6px;
+}
+
+.divider::after {
+  margin-left: 6px;
+}
+
+.social-login {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.social-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-1px);
+}
+
+.social-icon {
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.social-btn.google .social-icon {
+  color: #DB4437;
+}
+
+.social-btn.facebook .social-icon {
+  color: #4267B2;
+}
+
+.auth-link-text {
+  text-align: center;
+  color: #666;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.auth-link {
+  color: #2E8B57;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.auth-link:hover {
+  color: #ffd400;
+  text-decoration: underline;
+}
+
+/* Focus states for accessibility */
+.auth-input:focus,
+.auth-btn:focus,
+.auth-link:focus,
+.social-btn:focus {
+  outline: 2px solid #ffd400;
+  outline-offset: 1px;
+}
+
+/* Ensure no gaps on any elements */
+body, html, .signup-page, .signup-container, .signup-left, .signup-right {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column;
+  }
+  
+  .signup-left {
+    height: 30vh;
+  }
+  
+  .signup-right {
+    padding: 15px;
+  }
+  
+  .auth-card {
+    padding: 1.5rem;
+  }
+  
+  .auth-title {
+    font-size: 1.5rem;
+  }
+  
+  .signup-form-container {
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 1.2rem;
+  }
+  
+  .auth-title {
+    font-size: 1.3rem;
+  }
+  
+  .auth-input {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .auth-btn {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+  
+  .social-login {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .forgot-password {
+    margin-left: 25px;
+  }
+}
